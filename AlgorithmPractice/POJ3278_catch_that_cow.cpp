@@ -16,22 +16,25 @@ int bfs(int N, int K) {
     if (cur == K) {
       return pair.second;
     }
-    vis[cur] = true;
+    // vis[cur] = true; // Õâ»áµ¼ÖÂTLE
     if (cur - 1 >= 0 && !vis[cur - 1]) {
+      vis[cur - 1] = true;
       q.push(make_pair(cur - 1, step + 1));
     }
     if (cur + 1 <= 100000 && !vis[cur + 1]) {
+      vis[cur + 1] = true;
       q.push(make_pair(cur + 1, step + 1));
     }
     if (cur * 2 <= 100000 && !vis[cur * 2]) {
+      vis[cur * 2] = true;
       q.push(make_pair(cur * 2, step + 1));
     }
   }
 }
 
-int main() {
-  int N, K;
-  cin >> N >> K;
-  cout << bfs(N, K) << endl;
-  return 0;
-}
+//int main() {
+//  int N, K;
+//  cin >> N >> K;
+//  cout << bfs(N, K) << endl;
+//  return 0;
+//}
