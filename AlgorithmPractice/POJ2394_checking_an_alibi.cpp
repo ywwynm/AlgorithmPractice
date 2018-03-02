@@ -43,26 +43,26 @@ int spfa(int S, int T) {
   return dis[T];
 }
 
-int main() {
-  memset(nodes, -1, sizeof(nodes));
-  int F, P, C, M;
-  cin >> F >> P >> C >> M;
-  for (int i = 0; i < P; i++) {
-    int F1, F2, T;
-    cin >> F1 >> F2 >> T;
-    add_edge(F1, F2, T);
-    add_edge(F2, F1, T);
-  }
-  int count = 0;
-  vector<int> cows;
-  for (int i = 0; i < C; i++) {
-    int loc; cin >> loc;
-    if (spfa(loc, 1) <= M) {
-      count++;
-      cows.push_back(i + 1);
-    }
-  }
-  cout << count << endl;
-  for (int i = 0; i < count; i++) cout << cows[i] << endl;
-  return 0;
-}
+// int main() {
+//   memset(nodes, -1, sizeof(nodes));
+//   int F, P, C, M;
+//   cin >> F >> P >> C >> M;
+//   for (int i = 0; i < P; i++) {
+//     int F1, F2, T;
+//     cin >> F1 >> F2 >> T;
+//     add_edge(F1, F2, T);
+//     add_edge(F2, F1, T);
+//   }
+//   int count = 0;
+//   vector<int> cows;
+//   for (int i = 0; i < C; i++) {
+//     int loc; cin >> loc;
+//     if (spfa(loc, 1) <= M) {
+//       count++;
+//       cows.push_back(i + 1);
+//     }
+//   }
+//   cout << count << endl;
+//   for (int i = 0; i < count; i++) cout << cows[i] << endl;
+//   return 0;
+// }
