@@ -24,5 +24,8 @@
     <ClCompile Include="leetcode10_QAQ_regular_expression_matching.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode23_merge_k_sorted_lists.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
