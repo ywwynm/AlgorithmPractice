@@ -16,7 +16,7 @@ int edge_count = 0;
 int nodes[MAX_NODE];
 
 void add_edge(int u, int v, int w) {
-  E[edge_count] = (edge) { u, v, w, nodes[u] };
+  E[edge_count] = edge { u, v, w, nodes[u] };
   nodes[u] = edge_count++;
 }
 
