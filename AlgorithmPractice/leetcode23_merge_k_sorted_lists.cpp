@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -34,14 +35,53 @@ public:
     }
     return head->next;
   }
+
+  struct Cmp {
+    bool operator() (ListNode* const ln1, ListNode* const ln2) {
+      return ln1->val > ln2->val;
+    }
+  };
+
+  /*
+    Use a priority queue to reduce time complexity
+  */
+  ListNode* mergeKListsPriorityQ(vector<ListNode*>& lists) {
+    ListNode* head = new ListNode(0);
+    priority_queue<ListNode*, vector<ListNode*>, Cmp> pq;
+    for (auto node : lists) if (node != NULL) { 
+      pq.push(node); 
+    }
+    ListNode* cur = head;
+    while (!pq.empty()) {
+      ListNode* ln = pq.top(); pq.pop();
+      cur->next = ln;
+      cur = cur->next;
+      if (ln->next) pq.push(ln->next);
+    }
+    return head->next;
+  }
 };
 
 int main() {
-  ListNode* one = new ListNode(1);
+  ListNode* ln1 = new ListNode(1);
+  ListNode* ln2 = new ListNode(5);
+  ln1->next = ln2;
+
+  ListNode* ln3 = new ListNode(2);
+  ListNode* ln4 = new ListNode(3);
+  ln3->next = ln4;
+
   vector<ListNode*> v;
-  v.push_back(one);
+  v.push_back(ln1);
+  v.push_back(ln3);
+
   Solution s;
-  ListNode* res = s.mergeKLists(v);
-  cout << res->val << endl;
+  ListNode* res = s.mergeKListsPriorityQ(v);
+
+  while (res != NULL) {
+    cout << res->val << endl;
+    res = res->next;
+  }
+
   return 0;
 }
