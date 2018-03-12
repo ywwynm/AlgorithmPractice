@@ -27,5 +27,8 @@
     <ClCompile Include="leetcode23_merge_k_sorted_lists.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode25_reverse_nodes_in_k_group.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
