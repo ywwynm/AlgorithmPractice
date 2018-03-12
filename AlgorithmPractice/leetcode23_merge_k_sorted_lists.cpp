@@ -62,26 +62,26 @@ public:
   }
 };
 
-int main() {
-  ListNode* ln1 = new ListNode(1);
-  ListNode* ln2 = new ListNode(5);
-  ln1->next = ln2;
-
-  ListNode* ln3 = new ListNode(2);
-  ListNode* ln4 = new ListNode(3);
-  ln3->next = ln4;
-
-  vector<ListNode*> v;
-  v.push_back(ln1);
-  v.push_back(ln3);
-
-  Solution s;
-  ListNode* res = s.mergeKListsPriorityQ(v);
-
-  while (res != NULL) {
-    cout << res->val << endl;
-    res = res->next;
-  }
-
-  return 0;
-}
+//int main() {
+//  ListNode* ln1 = new ListNode(1);
+//  ListNode* ln2 = new ListNode(5);
+//  ln1->next = ln2;
+//
+//  ListNode* ln3 = new ListNode(2);
+//  ListNode* ln4 = new ListNode(3);
+//  ln3->next = ln4;
+//
+//  vector<ListNode*> v;
+//  v.push_back(ln1);
+//  v.push_back(ln3);
+//
+//  Solution s;
+//  ListNode* res = s.mergeKListsPriorityQ(v);
+//
+//  while (res != NULL) {
+//    cout << res->val << endl;
+//    res = res->next;
+//  }
+//
+//  return 0;
+//}
