@@ -12,7 +12,12 @@ class Solution {
 public:
 
   void reverse2(ListNode* head, ListNode* node, ListNode* swap) {
-    if (node->next == NULL) return;
+    if (node == NULL) {
+      return;
+    }
+    if (node->next == NULL) {
+      return;
+    }
     ListNode* a = node, *b = node->next;
     swap = b->next;
     b->next = a;
@@ -20,25 +25,36 @@ public:
     head->next = b;
   }
 
+  // 0 1 2 3 4, head = 0, node = 1, num = 4
   void reverse(ListNode* head, ListNode* node, ListNode* swap, int num) {
     // node到node后num个node进行颠倒(包括node), head->next = node
     for (int i = 1; i <= num - 1; i++) {
       int cur = 0;
       ListNode* realHead = head;
       while (cur < num - i) {
-        reverse2(realHead, node, swap);
+        reverse2(realHead, realHead->next, swap);
         cur++;
         realHead = head->next;
       }
     }
   }
 
+  void showList(ListNode* head) {
+    ListNode* cur = head;
+    while (cur != NULL) {
+      cout << cur->val << " ";
+      cur = cur->next;
+    }
+    cout << endl;
+  }
+
   ListNode * reverseKGroup(ListNode* head, int k) {
     if (k == 1) return head;
-    ListNode* newHead = new ListNode(0), *swap = NULL, *cur = head, *circleBeforeHead = newHead;
+    ListNode* newHead = new ListNode(0), *swap = NULL, *circleHead = head, *circleBeforeHead = newHead;
     newHead->next = head;
-    while (cur != NULL) {
-      ListNode* tmp = cur;
+    ListNode* tmp;
+    while (circleHead != NULL) {
+      tmp = circleHead;
       for (int i = 0; i < k - 1; i++) {
         if (tmp->next == NULL) {
           break; // 长度不够
@@ -46,7 +62,8 @@ public:
         tmp = tmp->next;
       }
 
-      reverse(circleBeforeHead, cur, swap, k);
+      reverse(circleBeforeHead, circleHead, swap, k);
+      showList(circleBeforeHead);
 
       tmp = circleBeforeHead->next;
       for (int i = 0; i < k - 1; i++) {
@@ -55,7 +72,7 @@ public:
       circleBeforeHead = tmp;
 
       if (circleBeforeHead != NULL) {
-        cur = circleBeforeHead->next;
+        circleHead = circleBeforeHead->next;
       }
       else break;
     }
@@ -74,12 +91,9 @@ int main() {
   ln3->next = ln4;
   ln4->next = ln5;
   Solution s;
-  ListNode* ln = s.reverseKGroup(ln1, 3);
+  ListNode* ln = s.reverseKGroup(ln1, 4);
 
-  while (ln != NULL) {
-    cout << ln->val << endl;
-    ln = ln->next;
-  }
+  s.showList(ln);
 
   return 0;
 }
