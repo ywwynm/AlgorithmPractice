@@ -25,7 +25,6 @@ public:
     head->next = b;
   }
 
-  // 0 1 2 3 4, head = 0, node = 1, num = 4
   void reverse(ListNode* head, ListNode* node, ListNode* swap, int num) {
     // node到node后num个node进行颠倒(包括node), head->next = node
     for (int i = 1; i <= num - 1; i++) {
@@ -33,8 +32,10 @@ public:
       ListNode* realHead = head;
       while (cur < num - i) {
         reverse2(realHead, realHead->next, swap);
+        /*cout << "after reverse2: ";
+        showList(head);*/
         cur++;
-        realHead = head->next;
+        realHead = realHead->next;
       }
     }
   }
@@ -57,18 +58,20 @@ public:
       tmp = circleHead;
       for (int i = 0; i < k - 1; i++) {
         if (tmp->next == NULL) {
-          break; // 长度不够
+          return newHead->next; // 长度不够
         }
         tmp = tmp->next;
       }
 
       reverse(circleBeforeHead, circleHead, swap, k);
-      showList(circleBeforeHead);
+      /*cout << "after reverse: ";
+      showList(circleBeforeHead);*/
 
       tmp = circleBeforeHead->next;
       for (int i = 0; i < k - 1; i++) {
         tmp = tmp->next;
       }
+      //cout << "tmp: " << tmp->val << endl;
       circleBeforeHead = tmp;
 
       if (circleBeforeHead != NULL) {
@@ -86,10 +89,16 @@ int main() {
   ListNode* ln3 = new ListNode(3);
   ListNode* ln4 = new ListNode(4);
   ListNode* ln5 = new ListNode(5);
+  ListNode* ln6 = new ListNode(6);
+  ListNode* ln7 = new ListNode(7);
+  ListNode* ln8 = new ListNode(8);
   ln1->next = ln2;
   ln2->next = ln3;
   ln3->next = ln4;
   ln4->next = ln5;
+  ln5->next = ln6;
+  ln6->next = ln7;
+  ln7->next = ln8;
   Solution s;
   ListNode* ln = s.reverseKGroup(ln1, 4);
 
