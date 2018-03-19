@@ -30,5 +30,8 @@
     <ClCompile Include="leetcode25_TODO_reverse_nodes_in_k_group.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode30_substring_with_concatenation_of_all_words.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
