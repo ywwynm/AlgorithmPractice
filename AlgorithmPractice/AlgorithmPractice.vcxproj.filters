@@ -24,10 +24,10 @@
     <ClCompile Include="leetcode10_QAQ_regular_expression_matching.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="leetcode23_merge_k_sorted_lists.cpp">
+    <ClCompile Include="leetcode23_TODO_merge_k_sorted_lists.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="leetcode25_reverse_nodes_in_k_group.cpp">
+    <ClCompile Include="leetcode25_TODO_reverse_nodes_in_k_group.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
