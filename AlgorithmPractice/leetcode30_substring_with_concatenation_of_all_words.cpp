@@ -39,26 +39,32 @@ public:
       if (!same_to_one_word) map[i] = -1;
     }
 
-    cout << "map: ";
-    show_int_vector(map);
+    /*cout << "map: ";
+    show_int_vector(map);*/
 
     int total_words_len = word_len * words_size;
     vector<bool> found(words_size, false);
     int matched_word_count = 0;
     int match_start_index = 0;
-    for (int i = 0; i <= s_len - total_words_len; ) {
+    for (int i = 0; i <= s_len - word_len; ) {
+      cout << "match_start: " << match_start_index << endl;
+      cout << "matched_word_count: " << matched_word_count << endl;
       cout << i << ", " << map[i];
       if (map[i] != -1) {
         cout << ", " << found[map[i]] << endl;
       } else cout << endl;
+
       if (map[i] == -1) {
+        cout << "i, map[" << i << "] == -1" << endl;
         i++;
+        matched_word_count = 0;
         match_start_index = i;
+        for (int j = 0; j < words_size; j++) found[j] = false;
       } else {
-        found[map[i]] = true;
-        matched_word_count++;
-        for (int j = i + word_len; matched_word_count != words_size; j += word_len) {
+        bool break_by_duplicate = false;
+        for (int j = i; matched_word_count != words_size; j += word_len) {
           if (map[j] == -1) {
+            cout << "j, map[" << i << "] == -1" << endl;
             i++;
             break;
           } else {
@@ -70,7 +76,8 @@ public:
               }
             }
             if (duplicated) {
-              i++;
+              cout << "duplicated, map[" << i << "]" << endl;
+              break_by_duplicate = true;
               break;
             }
             found[map[j]] = true;
@@ -78,15 +85,25 @@ public:
           }
         }
         if (matched_word_count == words_size) {
+          cout << match_start_index << " is pushed to res" << endl;
           res.push_back(match_start_index);
-          found[map[i]] = false;
-          match_start_index = i + word_len;
-          i += total_words_len;
+          found[map[match_start_index]] = false;
+          match_start_index += word_len;
+          i = match_start_index + total_words_len - word_len;
           matched_word_count--;
         } else {
-          matched_word_count = 0;
-          match_start_index = i;
-          for (int j = 0; j < words_size; j++) found[j] = false;
+          if (break_by_duplicate) {
+            found[map[match_start_index]] = false;
+            match_start_index += word_len;
+            if (i < match_start_index) {
+              i = match_start_index;
+            }
+            matched_word_count--;
+          } else {
+            matched_word_count = 0;
+            match_start_index = i;
+            for (int j = 0; j < words_size; j++) found[j] = false;
+          }
         }
       }
     }
@@ -96,10 +113,11 @@ public:
 
 int main() {
   Solution solution;
-  string s = "barfoobarthefoobarman";
+  string s = "barfoofoobarthefoobarman";
   vector<string> words;
-  words.push_back("foo");
   words.push_back("bar");
+  words.push_back("foo");
+  words.push_back("the");
   vector<int> res = solution.findSubstring(s, words);
   solution.show_int_vector(res);
   return 0;
