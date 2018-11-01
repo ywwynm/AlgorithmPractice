@@ -33,5 +33,8 @@
     <ClCompile Include="leetcode30_substring_with_concatenation_of_all_words.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode33_search_in_rotated_array.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
