@@ -43,10 +43,10 @@ public:
   }
 };
 
-int main() {
-  int nums_arr[] = { 4,5,6,7,0,1,2 };
-  vector<int> nums(nums_arr, nums_arr + 7);
-  Solution s;
-  cout << s.search(nums, 10) << endl;
-  return 0;
-}
+//int main() {
+//  int nums_arr[] = { 4,5,6,7,0,1,2 };
+//  vector<int> nums(nums_arr, nums_arr + 7);
+//  Solution s;
+//  cout << s.search(nums, 10) << endl;
+//  return 0;
+//}
