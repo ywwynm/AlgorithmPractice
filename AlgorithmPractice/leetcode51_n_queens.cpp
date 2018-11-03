@@ -52,9 +52,9 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  vector<vector<string>> solutions = s.solveNQueens(4);
-  cout << solutions.size() << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  vector<vector<string>> solutions = s.solveNQueens(4);
+//  cout << solutions.size() << endl;
+//  return 0;
+//}
