@@ -42,9 +42,9 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  int count = s.totalNQueens(4);
-  cout << count << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  int count = s.totalNQueens(4);
+//  cout << count << endl;
+//  return 0;
+//}

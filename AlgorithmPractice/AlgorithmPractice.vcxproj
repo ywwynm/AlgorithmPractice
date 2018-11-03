@@ -125,6 +125,7 @@
     <ClCompile Include="leetcode33_search_in_rotated_array.cpp" />
     <ClCompile Include="leetcode51_n_queens.cpp" />
     <ClCompile Include="leetcode52_n_queens_2.cpp" />
+    <ClCompile Include="leetcode54_spiral_matrix.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
   </ItemGroup>

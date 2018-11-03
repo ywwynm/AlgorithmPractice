@@ -42,5 +42,8 @@
     <ClCompile Include="leetcode52_n_queens_2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode54_spiral_matrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
