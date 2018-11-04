@@ -70,22 +70,22 @@ public:
   }
 };
 
-int main() {
-  vector<vector<int>> matrix;
-  /*int row1Arr[] = { 1,2,3,4 };
-  vector<int> row1(row1Arr, row1Arr + 4);
-  int row2Arr[] = { 5,6,7,8 };
-  vector<int> row2(row2Arr, row2Arr + 4);
-  int row3Arr[] = { 9,10,11,12 };
-  vector<int> row3(row3Arr, row3Arr + 4);
-  matrix.push_back(row1);
-  matrix.push_back(row2);
-  matrix.push_back(row3);*/
-  Solution s;
-  vector<int> res = s.spiralOrder(matrix);
-  for (auto i : res) {
-    cout << i << " ";
-  }
-  cout << endl;
-  return 0;
-}
+//int main() {
+//  vector<vector<int>> matrix;
+//  /*int row1Arr[] = { 1,2,3,4 };
+//  vector<int> row1(row1Arr, row1Arr + 4);
+//  int row2Arr[] = { 5,6,7,8 };
+//  vector<int> row2(row2Arr, row2Arr + 4);
+//  int row3Arr[] = { 9,10,11,12 };
+//  vector<int> row3(row3Arr, row3Arr + 4);
+//  matrix.push_back(row1);
+//  matrix.push_back(row2);
+//  matrix.push_back(row3);*/
+//  Solution s;
+//  vector<int> res = s.spiralOrder(matrix);
+//  for (auto i : res) {
+//    cout << i << " ";
+//  }
+//  cout << endl;
+//  return 0;
+//}
