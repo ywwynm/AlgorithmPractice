@@ -5,31 +5,30 @@ using namespace std;
 
 class Solution {
 public:
+
   bool canJump(vector<int>& nums) {
-    vector<vector<bool>> dp;
     const int size = nums.size();
+    if (size == 1) return true;
     for (int i = 0; i < size; i++) {
-      vector<bool> tmp;
-      for (int j = 0; j < size; j++) {
-        tmp.push_back(false);
-      }
-      dp.push_back(tmp);
-    }
-    dp[size - 1][size - 1] = true;
-    for (int i = size - 2; i >= 0; i--) {
-      for (int j = i + 1; j < size && !dp[i][size - 1]; j++) {
-        if (i + nums[i] >= j && dp[j][size - 1]) {
-          dp[i][size - 1] = true;
+      if (nums[i] == 0) {
+        bool canStride = false;
+        for (int j = i - 1; j >= 0 && !canStride; j--) {
+          if (j + nums[j] > i) {
+            canStride = true;
+          } else if (j + nums[j] == i && i == size - 1) {
+            canStride = true;
+          }
         }
+        if (!canStride) return false;
       }
     }
-    return dp[0][size - 1];
+    return true;
   }
 };
 
 int main() {
-  int arr[] = { 3,2,1,0,4 };
-  vector<int> v(arr, arr + 5);
+  int arr[] = { 2,0,0 };
+  vector<int> v(arr, arr + 3);
   Solution s;
   cout << s.canJump(v) << endl;
   return 0;
