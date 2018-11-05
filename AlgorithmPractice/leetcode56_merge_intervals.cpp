@@ -63,23 +63,23 @@ public:
   }
 };
 
-int main() {
-   Solution s;
-   Interval i1(2, 3);
-   Interval i2(4, 5);
-   Interval i3(6, 7);
-   Interval i4(8, 9);
-   Interval i5(1, 10);
-   //Interval i1(0, 2);
-   //Interval i2(1, 4);
-   //Interval i3(3, 5);
-   vector<Interval> v;
-   v.push_back(i1);
-   v.push_back(i2);
-   v.push_back(i3);
-   v.push_back(i4);
-   v.push_back(i5);
-   vector<Interval> res = s.merge(v);
-   s.showIntervals(res);
-  return 0;
-}
+//int main() {
+//   Solution s;
+//   Interval i1(2, 3);
+//   Interval i2(4, 5);
+//   Interval i3(6, 7);
+//   Interval i4(8, 9);
+//   Interval i5(1, 10);
+//   //Interval i1(0, 2);
+//   //Interval i2(1, 4);
+//   //Interval i3(3, 5);
+//   vector<Interval> v;
+//   v.push_back(i1);
+//   v.push_back(i2);
+//   v.push_back(i3);
+//   v.push_back(i4);
+//   v.push_back(i5);
+//   vector<Interval> res = s.merge(v);
+//   s.showIntervals(res);
+//  return 0;
+//}
