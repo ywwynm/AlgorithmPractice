@@ -26,10 +26,10 @@ public:
   }
 };
 
-int main() {
-  int arr[] = { 2,0,0 };
-  vector<int> v(arr, arr + 3);
-  Solution s;
-  cout << s.canJump(v) << endl;
-  return 0;
-}
+//int main() {
+//  int arr[] = { 2,0,0 };
+//  vector<int> v(arr, arr + 3);
+//  Solution s;
+//  cout << s.canJump(v) << endl;
+//  return 0;
+//}

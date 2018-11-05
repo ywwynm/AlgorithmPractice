@@ -126,7 +126,10 @@
     <ClCompile Include="leetcode51_n_queens.cpp" />
     <ClCompile Include="leetcode52_n_queens_2.cpp" />
     <ClCompile Include="leetcode54_spiral_matrix.cpp" />
-    <ClCompile Include="leetcode55_jump_game.cpp" />
+    <ClCompile Include="leetcode55_jump_game.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="leetcode56_merge_intervals.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
   </ItemGroup>
