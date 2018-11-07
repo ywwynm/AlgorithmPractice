@@ -51,5 +51,8 @@
     <ClCompile Include="leetcode56_merge_intervals.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode57_insert_intervals.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

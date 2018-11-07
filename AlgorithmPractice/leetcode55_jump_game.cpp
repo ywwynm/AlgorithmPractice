@@ -61,10 +61,10 @@ public:
   }
 };
 
-int main() {
-  int arr[] = { 3,2,1,0,4 };
-  vector<int> v(arr, arr + 3);
-  Solution s;
-  cout << s.myBetter2(v) << endl;
-  return 0;
-}
+//int main() {
+//  int arr[] = { 3,2,1,0,4 };
+//  vector<int> v(arr, arr + 3);
+//  Solution s;
+//  cout << s.myBetter2(v) << endl;
+//  return 0;
+//}
