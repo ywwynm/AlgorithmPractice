@@ -43,6 +43,7 @@ public:
             start = mid;
           }
         }
+        mid = (start + end) / 2;
       }
       intervals.insert(intervals.begin() + idx + 1, newInterval);
     }
@@ -71,6 +72,37 @@ public:
   }
 };
 
+int binSearchExt(int arr[], int size, int num) {
+  if (num <= arr[0]) {
+    return 0;
+  } else if (num >= arr[size - 1]) {
+    return size;
+  } else {
+    int start = 0, end = size - 1;
+    int mid = (start + end) / 2;
+    int idx = mid;
+    while (mid != start && mid != end) {
+      if (num <= arr[mid]) {
+        if (num >= arr[mid - 1]) {
+          idx = mid - 1;
+          break;
+        } else {
+          end = mid;
+        }
+      } else if (num >= arr[mid]) {
+        if (num <= arr[mid + 1]) {
+          idx = mid;
+          break;
+        } else {
+          start = mid;
+        }
+      }
+      mid = (start + end) / 2;
+    }
+    return idx + 1;
+  }
+};
+
 int main() {
   Solution s;
   Interval i1(1, 2);
@@ -84,7 +116,10 @@ int main() {
   v.push_back(i3);
   v.push_back(i4);
   v.push_back(i5);
-  vector<Interval> res = s.insert(v, Interval(4, 8));
+  vector<Interval> res = s.insert(v, Interval(1, 17));
   s.showIntervals(res);
+  /*int arr[10] = { 1,5,7,9,12,16,21,27,29,32 };
+  int num = 28;
+  cout << binSearchExt(arr, 10, num) << endl;*/
   return 0;
 }
