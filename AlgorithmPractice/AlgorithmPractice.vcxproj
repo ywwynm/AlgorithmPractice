@@ -131,6 +131,7 @@
     </ClCompile>
     <ClCompile Include="leetcode56_merge_intervals.cpp" />
     <ClCompile Include="leetcode57_insert_intervals.cpp" />
+    <ClCompile Include="leetcode58_length_of_last_word.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
   </ItemGroup>

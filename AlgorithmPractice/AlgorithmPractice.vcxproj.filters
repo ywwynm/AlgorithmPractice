@@ -54,5 +54,8 @@
     <ClCompile Include="leetcode57_insert_intervals.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode58_length_of_last_word.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

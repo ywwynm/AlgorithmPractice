@@ -103,23 +103,23 @@ int binSearchExt(int arr[], int size, int num) {
   }
 };
 
-int main() {
-  Solution s;
-  Interval i1(1, 2);
-  Interval i2(3, 5);
-  Interval i3(6, 7);
-  Interval i4(8, 10);
-  Interval i5(12, 16);
-  vector<Interval> v;
-  v.push_back(i1);
-  v.push_back(i2);
-  v.push_back(i3);
-  v.push_back(i4);
-  v.push_back(i5);
-  vector<Interval> res = s.insert(v, Interval(1, 17));
-  s.showIntervals(res);
-  /*int arr[10] = { 1,5,7,9,12,16,21,27,29,32 };
-  int num = 28;
-  cout << binSearchExt(arr, 10, num) << endl;*/
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  Interval i1(1, 2);
+//  Interval i2(3, 5);
+//  Interval i3(6, 7);
+//  Interval i4(8, 10);
+//  Interval i5(12, 16);
+//  vector<Interval> v;
+//  v.push_back(i1);
+//  v.push_back(i2);
+//  v.push_back(i3);
+//  v.push_back(i4);
+//  v.push_back(i5);
+//  vector<Interval> res = s.insert(v, Interval(1, 17));
+//  s.showIntervals(res);
+//  /*int arr[10] = { 1,5,7,9,12,16,21,27,29,32 };
+//  int num = 28;
+//  cout << binSearchExt(arr, 10, num) << endl;*/
+//  return 0;
+//}
