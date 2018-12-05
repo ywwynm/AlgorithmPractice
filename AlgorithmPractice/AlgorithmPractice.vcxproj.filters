@@ -57,5 +57,8 @@
     <ClCompile Include="leetcode58_length_of_last_word.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode60_permutation_sequence.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

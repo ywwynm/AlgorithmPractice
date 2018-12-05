@@ -24,8 +24,8 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  cout << s.lengthOfLastWord("hello1  world23 ") << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  cout << s.lengthOfLastWord("hello1  world23 ") << endl;
+//  return 0;
+//}
