@@ -29,8 +29,8 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  cout << s.getPermutation(2, 2) << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  cout << s.getPermutation(2, 2) << endl;
+//  return 0;
+//}

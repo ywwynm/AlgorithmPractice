@@ -60,5 +60,8 @@
     <ClCompile Include="leetcode60_permutation_sequence.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode61_rotate_list.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
