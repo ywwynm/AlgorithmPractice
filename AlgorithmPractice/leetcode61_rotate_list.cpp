@@ -34,24 +34,24 @@ public:
   }
 };
 
-int main() {
-  ListNode* n1 = new ListNode(1);
-  ListNode* n2 = new ListNode(2);
-  ListNode* n3 = new ListNode(3);
-  ListNode* n4 = new ListNode(4);
-  ListNode* n5 = new ListNode(5);
-  n1->next = n2;
-  n2->next = n3;
-  n3->next = n4;
-  n4->next = n5;
-  Solution s;
-
-  ListNode* node = s.rotateRight(n1, 6);
-  while (node != NULL) {
-    cout << node->val << " ";
-    node = node->next;
-  }
-  cout << endl;
-
-  return 0;
-}
+//int main() {
+//  ListNode* n1 = new ListNode(1);
+//  ListNode* n2 = new ListNode(2);
+//  ListNode* n3 = new ListNode(3);
+//  ListNode* n4 = new ListNode(4);
+//  ListNode* n5 = new ListNode(5);
+//  n1->next = n2;
+//  n2->next = n3;
+//  n3->next = n4;
+//  n4->next = n5;
+//  Solution s;
+//
+//  ListNode* node = s.rotateRight(n1, 6);
+//  while (node != NULL) {
+//    cout << node->val << " ";
+//    node = node->next;
+//  }
+//  cout << endl;
+//
+//  return 0;
+//}
