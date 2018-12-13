@@ -37,16 +37,28 @@ public:
     return count;
   }
 
+  int dp(int m, int n) {
+    vector<vector<int>> dp(m, vector<int>(n, 1));
+    for (int i = 0; i < m; i++) {
+      for (int j = 0; j < n; j++) {
+        if (i > 0 && j > 0) {
+          dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+        }
+      }
+    }
+    return dp[m - 1][n - 1];
+  }
+
   int uniquePaths(int m, int n) {
     /*int count = 0;
     dfs(1, 1, m, n, count);
     return count;*/
-    return bfs(m, n);
+    return dp(m, n);
   }
 };
 
-int main() {
-  Solution s;
-  cout << s.uniquePaths(28, 12) << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  cout << s.uniquePaths(28, 12) << endl;
+//  return 0;
+//}
