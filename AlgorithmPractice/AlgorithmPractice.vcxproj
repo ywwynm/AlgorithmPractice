@@ -136,6 +136,7 @@
     <ClCompile Include="leetcode61_rotate_list.cpp" />
     <ClCompile Include="leetcode62_unique_paths.cpp" />
     <ClCompile Include="leetcode63_unique_paths_ii.cpp" />
+    <ClCompile Include="leetcode64_minimum_path_sum.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
   </ItemGroup>

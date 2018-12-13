@@ -28,13 +28,13 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  vector<vector<int>> grid;
-  grid.push_back(vector<int>(2, 0));
-  /*grid.push_back(vector<int>(3, 0));
-  grid.push_back(vector<int>(3, 0));
-  grid[1][1] = 1;*/
-  cout << s.uniquePathsWithObstacles(grid) << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  vector<vector<int>> grid;
+//  grid.push_back(vector<int>(2, 0));
+//  /*grid.push_back(vector<int>(3, 0));
+//  grid.push_back(vector<int>(3, 0));
+//  grid[1][1] = 1;*/
+//  cout << s.uniquePathsWithObstacles(grid) << endl;
+//  return 0;
+//}
