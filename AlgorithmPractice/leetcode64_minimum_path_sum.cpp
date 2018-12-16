@@ -82,18 +82,18 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  int row1[3] = { 1,3,1 };
-  int row2[3] = { 1,5,1 };
-  int row3[3] = { 4,2,1 };
-  vector<int> v_row1(row1, row1 + 3);
-  vector<int> v_row2(row2, row2 + 3);
-  vector<int> v_row3(row3, row3 + 3);
-  vector<vector<int>> grid;
-  grid.push_back(v_row1);
-  grid.push_back(v_row2);
-  grid.push_back(v_row3);
-  cout << s.fasterDP(grid) << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  int row1[3] = { 1,3,1 };
+//  int row2[3] = { 1,5,1 };
+//  int row3[3] = { 4,2,1 };
+//  vector<int> v_row1(row1, row1 + 3);
+//  vector<int> v_row2(row2, row2 + 3);
+//  vector<int> v_row3(row3, row3 + 3);
+//  vector<vector<int>> grid;
+//  grid.push_back(v_row1);
+//  grid.push_back(v_row2);
+//  grid.push_back(v_row3);
+//  cout << s.fasterDP(grid) << endl;
+//  return 0;
+//}
