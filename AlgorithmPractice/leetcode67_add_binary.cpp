@@ -28,12 +28,12 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  cout << s.addBinary("0", "0") << endl;
-  cout << s.addBinary("0", "111") << endl;
-  cout << s.addBinary("11", "1") << endl;
-  cout << s.addBinary("1", "101") << endl;
-  cout << s.addBinary("1010", "1011") << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  cout << s.addBinary("0", "0") << endl;
+//  cout << s.addBinary("0", "111") << endl;
+//  cout << s.addBinary("11", "1") << endl;
+//  cout << s.addBinary("1", "101") << endl;
+//  cout << s.addBinary("1010", "1011") << endl;
+//  return 0;
+//}
