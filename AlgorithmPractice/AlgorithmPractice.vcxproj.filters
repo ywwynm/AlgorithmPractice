@@ -81,5 +81,8 @@
     <ClCompile Include="leetcode68_text_justification.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode69_sqrt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

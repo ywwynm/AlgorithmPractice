@@ -63,14 +63,14 @@ public:
 };
 
 
-int main() {
-  // string test[] = { "This", "is", "an", "example", "of", "text", "justification." };
-  string test[] = { "What","must","be","acknowledgment","shall","be" };
-  vector<string> words(test, test + 6);
-  Solution s;
-  vector<string> output = s.fullJustify(words, 16);
-  for (string str: output) {
-    cout << str << endl;
-  }
-  return 0;
-}
+//int main() {
+//  // string test[] = { "This", "is", "an", "example", "of", "text", "justification." };
+//  string test[] = { "What","must","be","acknowledgment","shall","be" };
+//  vector<string> words(test, test + 6);
+//  Solution s;
+//  vector<string> output = s.fullJustify(words, 16);
+//  for (string str: output) {
+//    cout << str << endl;
+//  }
+//  return 0;
+//}

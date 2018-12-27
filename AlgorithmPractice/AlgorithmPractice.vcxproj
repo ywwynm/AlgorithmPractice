@@ -139,6 +139,7 @@
     <ClCompile Include="leetcode64_minimum_path_sum.cpp" />
     <ClCompile Include="leetcode67_add_binary.cpp" />
     <ClCompile Include="leetcode68_text_justification.cpp" />
+    <ClCompile Include="leetcode69_sqrt.cpp" />
     <ClCompile Include="leetcode70_climbing_stairs.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
