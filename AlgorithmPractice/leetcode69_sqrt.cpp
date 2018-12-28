@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -23,10 +24,20 @@ public:
     }
     return (int) mid;
   }
+
+  int newton(int x) {
+    double xd = (double) x;
+    double xn = xd / 2.0;
+    while (fabs(xn * xn - xd) >= 0.1) {
+      // xn = xn / 2.0 + xd / (2.0 * xn);
+      xn = (xn + xd / xn) / 2.0;
+    }
+    return (int) xn;
+  }
 };
 
 int main() {
   Solution s;
-  cout << s.mySqrt(2) << endl;
+  cout << s.newton(2147395599) << endl;
   return 0;
 }
