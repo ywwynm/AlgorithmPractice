@@ -36,8 +36,8 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  cout << s.newton(2147395599) << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  cout << s.newton(2147395599) << endl;
+//  return 0;
+//}

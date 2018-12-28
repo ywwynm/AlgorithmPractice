@@ -84,5 +84,8 @@
     <ClCompile Include="leetcode69_sqrt.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode71_simplify_path.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
