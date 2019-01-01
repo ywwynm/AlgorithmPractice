@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{C0B5BA43-07E9-4AA6-BC05-564F1BB934DE}</ProjectGuid>
     <RootNamespace>AlgorithmPractice</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -142,6 +142,7 @@
     <ClCompile Include="leetcode69_sqrt.cpp" />
     <ClCompile Include="leetcode70_climbing_stairs.cpp" />
     <ClCompile Include="leetcode71_simplify_path.cpp" />
+    <ClCompile Include="leetcode72_edit_distance.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
   </ItemGroup>

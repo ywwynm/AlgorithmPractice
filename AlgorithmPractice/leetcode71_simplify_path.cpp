@@ -40,8 +40,8 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  cout << s.simplifyPath("/a/./b/../../c/") << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  cout << s.simplifyPath("/a/./b/../../c/") << endl;
+//  return 0;
+//}
