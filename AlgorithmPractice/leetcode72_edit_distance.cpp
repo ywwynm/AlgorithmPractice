@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <algorithm>
 
 using namespace std;
 
@@ -120,17 +121,65 @@ public:
     }
     return dp[len1 - 1][len2 - 1];
   }
+
+  int minDistance3(string word1, string word2) {
+    const int INF = 0x3f3f3f3f;
+    const int len1 = word1.length(), len2 = word2.length();
+    if (len1 == 0 || len2 == 0) {
+      return len1 > len2 ? len1 : len2;
+    }
+    vector<vector<int>> dp(len1, vector<int>(len2, 0x3f3f3f3f));
+    dp[0][0] = word1[0] == word2[0] ? 0 : 1;
+    for (int i = 0; i < len1; i++) for (int j = 0; j < len2; j++) {
+      if (i == 0 && j == 0) continue;
+      char c1 = word1[i], c2 = word2[j];
+      int x = i >= 1 ? dp[i - 1][j] + 1 : INF;
+      int y = j >= 1 ? dp[i][j - 1] + 1 : INF;
+      int z;
+      if (i >= 1 && j >= 1) {
+        z = dp[i - 1][j - 1];
+      } else if (i >= 1) {
+        z = i;
+      } else if (j >= 1) {
+        z = j;
+      } else {
+        z = INF;
+      }
+      if (c1 != c2) z++;
+      int tmp = x < y ? x : y;
+      dp[i][j] = tmp < z ? tmp : z;
+    }
+    return dp[len1 - 1][len2 - 1];
+  }
+
+  int minDistanceBestFromInternet(string word1, string word2) {
+    int m = word1.length(), n = word2.length();
+    vector<vector<int> > dp(m + 1, vector<int>(n + 1, 0));
+    for (int i = 1; i <= m; i++)
+      dp[i][0] = i;
+    for (int j = 1; j <= n; j++)
+      dp[0][j] = j;
+    for (int i = 1; i <= m; i++) {
+      for (int j = 1; j <= n; j++) {
+        if (word1[i - 1] == word2[j - 1])
+          dp[i][j] = dp[i - 1][j - 1];
+        else dp[i][j] = min(dp[i - 1][j - 1] + 1, min(dp[i][j - 1] + 1, dp[i - 1][j] + 1));
+      }
+    }
+    return dp[m][n];
+  }
 };
 
 int main() {
   Solution s;
-  cout << s.minDistance2("intention", "execution") << endl;
-  cout << s.minDistance2("a", "b") << endl;
-  cout << s.minDistance2("plasma", "altruism") << endl;
-  cout << s.minDistance2("pl", "las") << endl;
-  cout << s.minDistance2("abc", "apc") << endl;
-  cout << s.minDistance2("horse", "ros") << endl;
-  cout << s.minDistance2("a", "bc") << endl;
-  cout << s.minDistance2("a", "bac") << endl;
+  cout << s.minDistanceBestFromInternet("a", "ab") << endl;
+  cout << s.minDistanceBestFromInternet("intention", "execution") << endl;
+  cout << s.minDistanceBestFromInternet("a", "b") << endl;
+  cout << s.minDistanceBestFromInternet("plasma", "altruism") << endl;
+  cout << s.minDistanceBestFromInternet("pl", "las") << endl;
+  cout << s.minDistanceBestFromInternet("abc", "apc") << endl;
+  cout << s.minDistanceBestFromInternet("horse", "ros") << endl;
+  cout << s.minDistanceBestFromInternet("a", "bc") << endl;
+  cout << s.minDistanceBestFromInternet("a", "bac") << endl;
   return 0;
 }
