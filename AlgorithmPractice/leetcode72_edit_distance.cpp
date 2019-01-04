@@ -170,16 +170,16 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  cout << s.minDistanceBestFromInternet("a", "ab") << endl;
-  cout << s.minDistanceBestFromInternet("intention", "execution") << endl;
-  cout << s.minDistanceBestFromInternet("a", "b") << endl;
-  cout << s.minDistanceBestFromInternet("plasma", "altruism") << endl;
-  cout << s.minDistanceBestFromInternet("pl", "las") << endl;
-  cout << s.minDistanceBestFromInternet("abc", "apc") << endl;
-  cout << s.minDistanceBestFromInternet("horse", "ros") << endl;
-  cout << s.minDistanceBestFromInternet("a", "bc") << endl;
-  cout << s.minDistanceBestFromInternet("a", "bac") << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  cout << s.minDistanceBestFromInternet("a", "ab") << endl;
+//  cout << s.minDistanceBestFromInternet("intention", "execution") << endl;
+//  cout << s.minDistanceBestFromInternet("a", "b") << endl;
+//  cout << s.minDistanceBestFromInternet("plasma", "altruism") << endl;
+//  cout << s.minDistanceBestFromInternet("pl", "las") << endl;
+//  cout << s.minDistanceBestFromInternet("abc", "apc") << endl;
+//  cout << s.minDistanceBestFromInternet("horse", "ros") << endl;
+//  cout << s.minDistanceBestFromInternet("a", "bc") << endl;
+//  cout << s.minDistanceBestFromInternet("a", "bac") << endl;
+//  return 0;
+//}
