@@ -50,32 +50,32 @@ void printMatrix(vector<vector<int>> matrix) {
   }
 }
 
-int main() {
-  Solution s;
-  int row0[] = { 1,0,2,3 };
-  int row1[] = { 3,4,5,2 };
-  int row2[] = { 1,3,1,5 };
-  vector<int> vrow0(row0, row0 + 4);
-  vector<int> vrow1(row1, row1 + 4);
-  vector<int> vrow2(row2, row2 + 4);
-  vector<vector<int>> matrix;
-  matrix.push_back(vrow0);
-  matrix.push_back(vrow1);
-  matrix.push_back(vrow2);
-  s.setZeroes(matrix);
-  printMatrix(matrix);
-
-  /*int row0[] = { 1,2,3,4,0 };
-  int row1[] = { 5,6,7,8,0 };
-  int row2[] = { 9,10,11,12,13 };
-  vector<int> vrow0(row0, row0 + 5);
-  vector<int> vrow1(row1, row1 + 5);
-  vector<int> vrow2(row2, row2 + 5);
-  vector<vector<int>> matrix;
-  matrix.push_back(vrow0);
-  matrix.push_back(vrow1);
-  matrix.push_back(vrow2);
-  s.setZeroes(matrix);
-  printMatrix(matrix);*/
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  int row0[] = { 1,0,2,3 };
+//  int row1[] = { 3,4,5,2 };
+//  int row2[] = { 1,3,1,5 };
+//  vector<int> vrow0(row0, row0 + 4);
+//  vector<int> vrow1(row1, row1 + 4);
+//  vector<int> vrow2(row2, row2 + 4);
+//  vector<vector<int>> matrix;
+//  matrix.push_back(vrow0);
+//  matrix.push_back(vrow1);
+//  matrix.push_back(vrow2);
+//  s.setZeroes(matrix);
+//  printMatrix(matrix);
+//
+//  /*int row0[] = { 1,2,3,4,0 };
+//  int row1[] = { 5,6,7,8,0 };
+//  int row2[] = { 9,10,11,12,13 };
+//  vector<int> vrow0(row0, row0 + 5);
+//  vector<int> vrow1(row1, row1 + 5);
+//  vector<int> vrow2(row2, row2 + 5);
+//  vector<vector<int>> matrix;
+//  matrix.push_back(vrow0);
+//  matrix.push_back(vrow1);
+//  matrix.push_back(vrow2);
+//  s.setZeroes(matrix);
+//  printMatrix(matrix);*/
+//  return 0;
+//}
