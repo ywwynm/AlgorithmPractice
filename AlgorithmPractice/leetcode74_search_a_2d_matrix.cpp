@@ -80,8 +80,19 @@ public:
     int start = 0, end = m * n - 1;
     int mid = (start + end) / 2;
     while (start <= end) {
-
+      int r = mid / n, c = mid % n;
+      cout << "best search: " << start << ", " << end << ", " << mid << ", " << r << ", " << c << endl;
+      int value = matrix[r][c];
+      if (value == target) {
+        return true;
+      } else if (value < target) {
+        start = mid + 1;
+      } else {
+        end = mid - 1;
+      }
+      mid = (start + end) / 2;
     }
+    return false;
   }
 };
 
@@ -103,12 +114,12 @@ int main() {
   Solution s;
   cout << s.searchMatrix(matrix, 26) << endl;*/
 
-  //int row1[] = { 1 };
-  //vector<int> v_row1(row1, row1 + 1);
-  //vector<vector<int>> matrix;
-  //// matrix.push_back(v_row1);
-  //Solution s;
-  //cout << s.searchMatrix(matrix, 0) << endl;
+  /*int row1[] = { 1 };
+  vector<int> v_row1(row1, row1 + 1);
+  vector<vector<int>> matrix;
+  matrix.push_back(v_row1);
+  Solution s;
+  cout << s.best(matrix, 1) << endl;*/
 
   /*int row1[] = { 1 };
   int row2[] = { 10 };
@@ -127,9 +138,9 @@ int main() {
   matrix.push_back(v_row4);
   matrix.push_back(v_row5);
   Solution s;
-  cout << s.searchMatrix(matrix, 31) << endl;*/
+  cout << s.best(matrix, 1) << endl;*/
 
-  int row1[] = { 1,1 };
+  /*int row1[] = { 1,1 };
   int row2[] = { 2,2 };
   vector<int> v_row1(row1, row1 + 2);
   vector<int> v_row2(row2, row2 + 2);
@@ -137,7 +148,7 @@ int main() {
   matrix.push_back(v_row1);
   matrix.push_back(v_row2);
   Solution s;
-  cout << s.searchMatrix(matrix, 1) << endl;
+  cout << s.best(matrix, 1) << endl;*/
 
   return 0;
 }
