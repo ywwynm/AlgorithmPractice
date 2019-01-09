@@ -71,6 +71,18 @@ public:
     }
     return false;
   }
+
+  bool best(vector<vector<int>>& matrix, int target) {
+    const int m = matrix.size();
+    if (m == 0) return false;
+    const int n = matrix[0].size();
+    if (n == 0) return false;
+    int start = 0, end = m * n - 1;
+    int mid = (start + end) / 2;
+    while (start <= end) {
+
+    }
+  }
 };
 
 int main() {
