@@ -96,5 +96,8 @@
     <ClCompile Include="leetcode74_search_a_2d_matrix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode75_sort_colors.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

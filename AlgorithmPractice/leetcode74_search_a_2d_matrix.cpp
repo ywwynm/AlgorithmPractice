@@ -96,59 +96,59 @@ public:
   }
 };
 
-int main() {
-  /*int row[] = { 1,3,5,6,8,12,17,20,21 };
-  vector<int> v_row(row, row + 9);
-  Solution s;
-  cout << s.searchRow(v_row, 1);*/
-  /*int row1[] = { 1,3,5,7 };
-  int row2[] = { 10,11,16,20 };
-  int row3[] = { 23,30,34,50 };
-  vector<int> v_row1(row1, row1 + 4);
-  vector<int> v_row2(row2, row2 + 4);
-  vector<int> v_row3(row3, row3 + 4);
-  vector<vector<int>> matrix;
-  matrix.push_back(v_row1);
-  matrix.push_back(v_row2);
-  matrix.push_back(v_row3);
-  Solution s;
-  cout << s.searchMatrix(matrix, 26) << endl;*/
-
-  /*int row1[] = { 1 };
-  vector<int> v_row1(row1, row1 + 1);
-  vector<vector<int>> matrix;
-  matrix.push_back(v_row1);
-  Solution s;
-  cout << s.best(matrix, 1) << endl;*/
-
-  /*int row1[] = { 1 };
-  int row2[] = { 10 };
-  int row3[] = { 23 };
-  int row4[] = { 31 };
-  int row5[] = { 32 };
-  vector<int> v_row1(row1, row1 + 1);
-  vector<int> v_row2(row2, row2 + 1);
-  vector<int> v_row3(row3, row3 + 1);
-  vector<int> v_row4(row4, row4 + 1);
-  vector<int> v_row5(row5, row5 + 1);
-  vector<vector<int>> matrix;
-  matrix.push_back(v_row1);
-  matrix.push_back(v_row2);
-  matrix.push_back(v_row3);
-  matrix.push_back(v_row4);
-  matrix.push_back(v_row5);
-  Solution s;
-  cout << s.best(matrix, 1) << endl;*/
-
-  /*int row1[] = { 1,1 };
-  int row2[] = { 2,2 };
-  vector<int> v_row1(row1, row1 + 2);
-  vector<int> v_row2(row2, row2 + 2);
-  vector<vector<int>> matrix;
-  matrix.push_back(v_row1);
-  matrix.push_back(v_row2);
-  Solution s;
-  cout << s.best(matrix, 1) << endl;*/
-
-  return 0;
-}
+//int main() {
+//  /*int row[] = { 1,3,5,6,8,12,17,20,21 };
+//  vector<int> v_row(row, row + 9);
+//  Solution s;
+//  cout << s.searchRow(v_row, 1);*/
+//  /*int row1[] = { 1,3,5,7 };
+//  int row2[] = { 10,11,16,20 };
+//  int row3[] = { 23,30,34,50 };
+//  vector<int> v_row1(row1, row1 + 4);
+//  vector<int> v_row2(row2, row2 + 4);
+//  vector<int> v_row3(row3, row3 + 4);
+//  vector<vector<int>> matrix;
+//  matrix.push_back(v_row1);
+//  matrix.push_back(v_row2);
+//  matrix.push_back(v_row3);
+//  Solution s;
+//  cout << s.searchMatrix(matrix, 26) << endl;*/
+//
+//  /*int row1[] = { 1 };
+//  vector<int> v_row1(row1, row1 + 1);
+//  vector<vector<int>> matrix;
+//  matrix.push_back(v_row1);
+//  Solution s;
+//  cout << s.best(matrix, 1) << endl;*/
+//
+//  /*int row1[] = { 1 };
+//  int row2[] = { 10 };
+//  int row3[] = { 23 };
+//  int row4[] = { 31 };
+//  int row5[] = { 32 };
+//  vector<int> v_row1(row1, row1 + 1);
+//  vector<int> v_row2(row2, row2 + 1);
+//  vector<int> v_row3(row3, row3 + 1);
+//  vector<int> v_row4(row4, row4 + 1);
+//  vector<int> v_row5(row5, row5 + 1);
+//  vector<vector<int>> matrix;
+//  matrix.push_back(v_row1);
+//  matrix.push_back(v_row2);
+//  matrix.push_back(v_row3);
+//  matrix.push_back(v_row4);
+//  matrix.push_back(v_row5);
+//  Solution s;
+//  cout << s.best(matrix, 1) << endl;*/
+//
+//  /*int row1[] = { 1,1 };
+//  int row2[] = { 2,2 };
+//  vector<int> v_row1(row1, row1 + 2);
+//  vector<int> v_row2(row2, row2 + 2);
+//  vector<vector<int>> matrix;
+//  matrix.push_back(v_row1);
+//  matrix.push_back(v_row2);
+//  Solution s;
+//  cout << s.best(matrix, 1) << endl;*/
+//
+//  return 0;
+//}
