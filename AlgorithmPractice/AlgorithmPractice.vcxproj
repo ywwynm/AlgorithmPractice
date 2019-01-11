@@ -146,6 +146,7 @@
     <ClCompile Include="leetcode73_set_matrix_zeroes.cpp" />
     <ClCompile Include="leetcode74_search_a_2d_matrix.cpp" />
     <ClCompile Include="leetcode75_sort_colors.cpp" />
+    <ClCompile Include="leetcode77_combinations.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
   </ItemGroup>

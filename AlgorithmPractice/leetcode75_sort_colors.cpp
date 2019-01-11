@@ -38,12 +38,12 @@ public:
   }
 };
 
-int main() {
-  int arr[] = { 1,1,2,1,1 };
-  vector<int> v(arr, arr + 5);
-  Solution s;
-  s.sortColors(v);
-  s.print_vector(v);
-  
-  return 0;
-}
+//int main() {
+//  int arr[] = { 1,1,2,1,1 };
+//  vector<int> v(arr, arr + 5);
+//  Solution s;
+//  s.sortColors(v);
+//  s.print_vector(v);
+//  
+//  return 0;
+//}

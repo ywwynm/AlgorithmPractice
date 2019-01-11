@@ -99,5 +99,8 @@
     <ClCompile Include="leetcode75_sort_colors.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode77_combinations.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
