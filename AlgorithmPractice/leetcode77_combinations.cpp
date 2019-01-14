@@ -29,14 +29,14 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  vector<vector<int>> ret = s.combine(5, 3);
-  for (auto v : ret) {
-    for (auto i : v) {
-      cout << i << " ";
-    }
-    cout << endl;
-  }
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  vector<vector<int>> ret = s.combine(5, 3);
+//  for (auto v : ret) {
+//    for (auto i : v) {
+//      cout << i << " ";
+//    }
+//    cout << endl;
+//  }
+//  return 0;
+//}
