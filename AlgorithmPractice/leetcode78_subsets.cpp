@@ -29,16 +29,16 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  int arr[] = { 1, 2, 3, 5 };
-  vector<int> nums(arr, arr + 4);
-  vector<vector<int>> subsets = s.subsets(nums);
-  for (auto v : subsets) {
-    for (auto i : v) {
-      cout << i << " ";
-    }
-    cout << endl;
-  }
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  int arr[] = { 1, 2, 3, 5 };
+//  vector<int> nums(arr, arr + 4);
+//  vector<vector<int>> subsets = s.subsets(nums);
+//  for (auto v : subsets) {
+//    for (auto i : v) {
+//      cout << i << " ";
+//    }
+//    cout << endl;
+//  }
+//  return 0;
+//}

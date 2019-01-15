@@ -105,5 +105,8 @@
     <ClCompile Include="leetcode78_subsets.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode79_word_search.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

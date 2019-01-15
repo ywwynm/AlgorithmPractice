@@ -148,6 +148,7 @@
     <ClCompile Include="leetcode75_sort_colors.cpp" />
     <ClCompile Include="leetcode77_combinations.cpp" />
     <ClCompile Include="leetcode78_subsets.cpp" />
+    <ClCompile Include="leetcode79_word_search.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
   </ItemGroup>
