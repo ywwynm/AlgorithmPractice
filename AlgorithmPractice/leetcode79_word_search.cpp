@@ -45,21 +45,21 @@ public:
 
 };
 
-int main() {
-  char row1[] = { 'A','B','C','E' };
-  char row2[] = { 'S','F','C','S' };
-  char row3[] = { 'A','D','E','E' };
-  /*char row1[] = { 'a','a','a','a' };
-  char row2[] = { 'a','a','a','a' };
-  char row3[] = { 'a','a','a','a' };*/
-  vector<char> vrow1(row1, row1 + 4);
-  vector<char> vrow2(row2, row2 + 4);
-  vector<char> vrow3(row3, row3 + 4);
-  vector<vector<char>> board;
-  board.push_back(vrow1);
-  board.push_back(vrow2);
-  board.push_back(vrow3);
-  Solution s;
-  cout << s.exist(board, "SEE") << endl;
-  return 0;
-}
+//int main() {
+//  char row1[] = { 'A','B','C','E' };
+//  char row2[] = { 'S','F','C','S' };
+//  char row3[] = { 'A','D','E','E' };
+//  /*char row1[] = { 'a','a','a','a' };
+//  char row2[] = { 'a','a','a','a' };
+//  char row3[] = { 'a','a','a','a' };*/
+//  vector<char> vrow1(row1, row1 + 4);
+//  vector<char> vrow2(row2, row2 + 4);
+//  vector<char> vrow3(row3, row3 + 4);
+//  vector<vector<char>> board;
+//  board.push_back(vrow1);
+//  board.push_back(vrow2);
+//  board.push_back(vrow3);
+//  Solution s;
+//  cout << s.exist(board, "SEE") << endl;
+//  return 0;
+//}
