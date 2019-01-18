@@ -48,11 +48,11 @@ public:
   }
 };
 
-int main() {
-  int arr[] = { 2,2,2,3 };
-  vector<int> nums(arr, arr + 4);
-  Solution s;
-  cout << s.removeDuplicates(nums) << endl;
-  s.printVector(nums);
-  return 0;
-}
+//int main() {
+//  int arr[] = { 2,2,2,3 };
+//  vector<int> nums(arr, arr + 4);
+//  Solution s;
+//  cout << s.removeDuplicates(nums) << endl;
+//  s.printVector(nums);
+//  return 0;
+//}
