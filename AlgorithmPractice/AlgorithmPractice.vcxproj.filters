@@ -108,10 +108,10 @@
     <ClCompile Include="leetcode79_word_search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="leetcode76_minimum_window_substring.cpp">
+    <ClCompile Include="leetcode76_QAQ_minimum_window_substring.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="leetcode80_QAQ_remove_duplicates_from_sorted_array_ii.cpp">
+    <ClCompile Include="leetcode80_remove_duplicates_from_sorted_array_ii.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
