@@ -122,3 +122,76 @@
 //  solution.show_int_vector(res);
 //  return 0;
 //}
+
+#include <vector>
+#include <iostream>
+#include <unordered_map>
+
+using namespace std;
+
+class Solution {
+public:
+  void resetMap(unordered_map<string, int>& map, vector<string> words) {
+    for (auto word : words) map[word] = 0;
+    for (auto word : words) map[word]++;
+  }
+
+  vector<int> findSubstring(string s, vector<string>& words) {
+    vector<int> ret;
+    if (s == "" || words.size() == 0) return ret;
+    int sLen = s.length(), wLen = words[0].length();
+    if (sLen < wLen) {
+      return ret;
+    }
+    unordered_map<string, int> map;
+    for (auto word : words) {
+      if (map.find(word) != map.end()) {
+        map[word] = map[word] + 1;
+      } else {
+        pair<string, int> p(word, 1);
+        map.insert(p);
+      }
+    }
+    int wordsSize = words.size();
+    int left = 0, start = 0, leftWord = wordsSize;
+    while (left < sLen) {
+      string tmp = s.substr(left, wLen);
+      cout << left << endl;
+      if (map.find(tmp) == map.end()) {
+        left = start + 1;
+        start = left;
+        resetMap(map, words);
+        leftWord = wordsSize;
+      } else {
+        map[tmp]--;
+        if (map[tmp] >= 0) {
+          left += wLen;
+          leftWord--;
+          if (leftWord == 0) {
+            ret.push_back(start);
+            left = start + 1;
+            start = left;
+            resetMap(map, words);
+            leftWord = wordsSize;
+          }
+        } else {
+          left = start + 1;
+          start = left;
+          resetMap(map, words);
+          leftWord = wordsSize;
+        }
+      }
+    }
+    return ret;
+  }
+};
+
+int main() {
+  Solution s;
+  string words[] = { "word","good" };
+  vector<string> vwords;
+  vector<int> indices = s.findSubstring("", vwords);
+  for (auto i : indices) cout << i << " ";
+  cout << endl;
+  return 0;
+}

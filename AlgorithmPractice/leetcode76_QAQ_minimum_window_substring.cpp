@@ -39,8 +39,8 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  cout << s.minWindow("ADOBECODEBANC", "ABC") << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  cout << s.minWindow("ADOBECODEBANC", "ABC") << endl;
+//  return 0;
+//}
