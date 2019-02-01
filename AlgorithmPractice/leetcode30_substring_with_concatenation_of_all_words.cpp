@@ -131,10 +131,6 @@ using namespace std;
 
 class Solution {
 public:
-  void resetMap(unordered_map<string, int>& map, vector<string> words) {
-    for (auto word : words) map[word] = 0;
-    for (auto word : words) map[word]++;
-  }
 
   vector<int> findSubstring(string s, vector<string>& words) {
     vector<int> ret;
@@ -143,42 +139,43 @@ public:
     if (sLen < wLen) {
       return ret;
     }
+
     unordered_map<string, int> map;
-    for (auto word : words) {
-      if (map.find(word) != map.end()) {
-        map[word] = map[word] + 1;
-      } else {
-        pair<string, int> p(word, 1);
-        map.insert(p);
-      }
-    }
-    int wordsSize = words.size();
-    int left = 0, start = 0, leftWord = wordsSize;
+    for (auto word : words) map.insert_or_assign(word, 0);
+    for (auto word : words) map[word]++;
+
+    int wSize = words.size();
+    int left = 0, start = 0, leftWord = wSize;
+    unordered_map<string, int> seen;
     while (left < sLen) {
       string tmp = s.substr(left, wLen);
-      cout << left << endl;
+      // cout << left << "," << tmp.c_str() << endl;
       if (map.find(tmp) == map.end()) {
         left = start + 1;
         start = left;
-        resetMap(map, words);
-        leftWord = wordsSize;
+        leftWord = wSize;
+        seen.clear();
       } else {
-        map[tmp]--;
-        if (map[tmp] >= 0) {
+        if (seen.find(tmp) != seen.end()) {
+          seen[tmp]++;
+        } else {
+          seen.insert(make_pair(tmp, 1));
+        }
+        if (seen[tmp] <= map[tmp]) {
           left += wLen;
           leftWord--;
           if (leftWord == 0) {
             ret.push_back(start);
             left = start + 1;
             start = left;
-            resetMap(map, words);
-            leftWord = wordsSize;
+            leftWord = wSize;
+            seen.clear();
           }
         } else {
           left = start + 1;
           start = left;
-          resetMap(map, words);
-          leftWord = wordsSize;
+          leftWord = wSize;
+          seen.clear();
         }
       }
     }
@@ -188,9 +185,9 @@ public:
 
 int main() {
   Solution s;
-  string words[] = { "word","good" };
-  vector<string> vwords;
-  vector<int> indices = s.findSubstring("", vwords);
+  string words[] = { "aa","aa" };
+  vector<string> vwords(words, words + 2);
+  vector<int> indices = s.findSubstring("aaaaa", vwords);
   for (auto i : indices) cout << i << " ";
   cout << endl;
   return 0;
