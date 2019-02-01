@@ -145,38 +145,24 @@ public:
     for (auto word : words) map[word]++;
 
     int wSize = words.size();
-    int left = 0, start = 0, leftWord = wSize;
-    unordered_map<string, int> seen;
-    while (left < sLen) {
-      string tmp = s.substr(left, wLen);
-      // cout << left << "," << tmp.c_str() << endl;
-      if (map.find(tmp) == map.end()) {
-        left = start + 1;
-        start = left;
-        leftWord = wSize;
-        seen.clear();
-      } else {
+    for (int i = 0; i < sLen - wSize * wLen + 1; i++) {
+      unordered_map<string, int> seen;
+      int leftWord = wSize;
+      for (int j = i; j < sLen; ) {
+        string tmp = s.substr(j, wLen);
+        if (map.find(tmp) == map.end()) break;
         if (seen.find(tmp) != seen.end()) {
           seen[tmp]++;
         } else {
           seen.insert(make_pair(tmp, 1));
         }
-        if (seen[tmp] <= map[tmp]) {
-          left += wLen;
-          leftWord--;
-          if (leftWord == 0) {
-            ret.push_back(start);
-            left = start + 1;
-            start = left;
-            leftWord = wSize;
-            seen.clear();
-          }
-        } else {
-          left = start + 1;
-          start = left;
-          leftWord = wSize;
-          seen.clear();
+        if (seen[tmp] > map[tmp]) break;
+        leftWord--;
+        if (leftWord == 0) {
+          ret.push_back(i);
+          break;
         }
+        j += wLen;
       }
     }
     return ret;
