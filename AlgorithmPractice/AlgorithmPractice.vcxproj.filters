@@ -114,5 +114,8 @@
     <ClCompile Include="leetcode80_remove_duplicates_from_sorted_array_ii.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode32_longest_valid_parentheses.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

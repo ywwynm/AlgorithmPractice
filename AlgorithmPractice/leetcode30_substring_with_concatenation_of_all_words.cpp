@@ -217,12 +217,12 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  string words[] = { "aa","aa" };
-  vector<string> vwords(words, words + 2);
-  vector<int> indices = s.better("aaaaa", vwords);
-  for (auto i : indices) cout << i << " ";
-  cout << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  string words[] = { "aa","aa" };
+//  vector<string> vwords(words, words + 2);
+//  vector<int> indices = s.better("aaaaa", vwords);
+//  for (auto i : indices) cout << i << " ";
+//  cout << endl;
+//  return 0;
+//}

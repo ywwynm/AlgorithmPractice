@@ -122,6 +122,7 @@
     <ClCompile Include="leetcode23_TODO_merge_k_sorted_lists.cpp" />
     <ClCompile Include="leetcode25_TODO_reverse_nodes_in_k_group.cpp" />
     <ClCompile Include="leetcode30_substring_with_concatenation_of_all_words.cpp" />
+    <ClCompile Include="leetcode32_longest_valid_parentheses.cpp" />
     <ClCompile Include="leetcode33_search_in_rotated_array.cpp" />
     <ClCompile Include="leetcode51_n_queens.cpp" />
     <ClCompile Include="leetcode52_n_queens_2.cpp" />
