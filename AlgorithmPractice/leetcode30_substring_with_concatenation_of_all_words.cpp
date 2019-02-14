@@ -167,13 +167,61 @@ public:
     }
     return ret;
   }
+
+  vector<int> better(string s, vector<string>& words) {
+    vector<int> ret;
+    if (s.empty() || words.empty()) return ret;
+    int sLen = s.length(), wLen = words[0].length();
+    if (sLen < wLen) {
+      return ret;
+    }
+
+    unordered_map<string, int> map;
+    for (auto word : words) map[word]++;
+
+    int wSize = words.size();
+    for (int i = 0; i < wLen; i++) {
+      int start = i, seenCount = 0;
+      unordered_map<string, int> seen;
+      for (int j = i; j <= sLen - wLen; j += wLen) {
+        string cur = s.substr(j, wLen);
+        if (map.find(cur) == map.end()) { // 遇到了不正确的词
+          seen.clear();
+          start = j + wLen;
+          seenCount = 0;
+        } else {
+          seen[cur]++;
+          if (seen[cur] <= map[cur]) {
+            seenCount++;
+          } else {
+            while (seen[cur] > map[cur]) {
+              string tmp = s.substr(start, wLen);
+              seen[tmp]--;
+              if (seen[tmp] < map[tmp]) {
+                seenCount--;
+              }
+              start += wLen;
+            }
+          }
+          if (seenCount == wSize) {
+            ret.push_back(start);
+            seen[s.substr(start, wLen)]--;
+            seenCount--;
+            start += wLen;
+          }
+        }
+      }
+    }
+
+    return ret;
+  }
 };
 
 int main() {
   Solution s;
   string words[] = { "aa","aa" };
   vector<string> vwords(words, words + 2);
-  vector<int> indices = s.findSubstring("aaaaa", vwords);
+  vector<int> indices = s.better("aaaaa", vwords);
   for (auto i : indices) cout << i << " ";
   cout << endl;
   return 0;
