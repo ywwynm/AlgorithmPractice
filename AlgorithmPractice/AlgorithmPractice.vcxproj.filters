@@ -117,5 +117,8 @@
     <ClCompile Include="leetcode32_longest_valid_parentheses.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode81_search_in_rotated_array_ii.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
