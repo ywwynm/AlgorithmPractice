@@ -120,5 +120,8 @@
     <ClCompile Include="leetcode81_search_in_rotated_array_ii.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode_83_82_remove_duplicates_from_sorted_list.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
