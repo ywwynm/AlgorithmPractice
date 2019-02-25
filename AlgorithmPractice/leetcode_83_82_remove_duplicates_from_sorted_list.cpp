@@ -33,6 +33,31 @@ public:
     }
     return head;
   }
+
+  ListNode* deleteDuplicates2(ListNode* head) {
+    if (head == NULL) return NULL;
+
+    ListNode* retHead = new ListNode(0);
+    ListNode* last = retHead;
+    retHead->next = head;
+    ListNode* cur = head;
+    bool shouldDeleteLast = false;
+    while (cur->next != NULL) {
+      if (cur->val == cur->next->val) {
+        shouldDeleteLast = true;
+        cur->next = cur->next->next;
+      } else {
+        if (shouldDeleteLast) {
+          last->next = cur->next;
+        } else {
+          last = cur;
+        }
+        shouldDeleteLast = false;
+        cur = cur->next;
+      }
+    }
+    return retHead->next;
+  }
 };
 
 int main() {
@@ -50,7 +75,7 @@ int main() {
   Solution s;
   s.printNodes(n1);
 
-  ListNode* newHead = s.deleteDuplicates(n1);
+  ListNode* newHead = s.deleteDuplicates2(n1);
   s.printNodes(newHead);
   return 0;
 }
