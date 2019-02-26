@@ -42,7 +42,11 @@ public:
     retHead->next = head;
     ListNode* cur = head;
     bool shouldDeleteLast = false;
-    while (cur->next != NULL) {
+    while (cur != NULL) {
+      if (cur->next == NULL) {
+        if (shouldDeleteLast) last->next = cur->next;
+        break;
+      }
       if (cur->val == cur->next->val) {
         shouldDeleteLast = true;
         cur->next = cur->next->next;
@@ -61,11 +65,11 @@ public:
 };
 
 int main() {
-  ListNode *n1 = new ListNode(1);
+  ListNode *n1 = new ListNode(2);
   ListNode *n2 = new ListNode(2);
   ListNode *n3 = new ListNode(2);
-  ListNode *n4 = new ListNode(3);
-  ListNode *n5 = new ListNode(3);
+  ListNode *n4 = new ListNode(2);
+  ListNode *n5 = new ListNode(2);
 
   n1->next = n2;
   n2->next = n3;
