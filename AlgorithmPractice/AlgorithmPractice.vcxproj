@@ -154,6 +154,7 @@
     <ClCompile Include="leetcode80_remove_duplicates_from_sorted_array_ii.cpp" />
     <ClCompile Include="leetcode81_search_in_rotated_array_ii.cpp" />
     <ClCompile Include="leetcode83_82_remove_duplicates_from_sorted_list.cpp" />
+    <ClCompile Include="leetcode86_partition_list.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
   </ItemGroup>
