@@ -8,22 +8,23 @@ public:
   int largestRectangleArea(vector<int>& heights) {
     int maxArea = 0;
     const int size = heights.size();
-    vector<vector<int>> dp(size, vector<int>()); // 节约空间，每个第二维的vector只存储>=i的信息
+    vector<int> dp;
     for (int i = 0; i < size; i++) {
       for (int j = i; j < size; j++) {
         int area;
         if (i == j) {
-          dp[i].push_back(j);
+          dp.push_back(j);
           area = heights[i];
         } else {
-          int x = dp[i][j - i - 1];
+          int x = dp[j - i - 1];
           int newx = heights[j] < heights[x] ? j : x;
-          dp[i].push_back(newx);
+          dp.push_back(newx);
           area = heights[newx] * (j - i + 1);
         }
-        // cout << i << ", " << j << " -> minHeightIdx: " << dp[i][j] << ", area: " << area << endl;
+        // cout << i << ", " << j << " -> minHeightIdx: " << dp[j - i] << ", area: " << area << endl;
         if (area > maxArea) maxArea = area;
       }
+      dp.clear();
     }
     return maxArea;
   }
