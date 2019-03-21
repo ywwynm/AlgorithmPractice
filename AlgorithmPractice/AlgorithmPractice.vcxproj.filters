@@ -129,5 +129,8 @@
     <ClCompile Include="leetcode84_largest_rectangle_in_histogram.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="leetcode89_gray_code.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

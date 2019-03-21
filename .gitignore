@@ -260,3 +260,6 @@ paket-files/
 __pycache__/
 *.pyc
 .vscode/settings.json
+/AlgorithmPractice/leetcode88_merge_sorted_array
+/AlgorithmPractice/tempCodeRunnerFile.cpp
+/AlgorithmPractice/leetcode84_largest_rectangle_in_histogram
