@@ -30,10 +30,10 @@ public:
   }
 };
 
-int main() {
-  vector<int> heights = { 2,1,5,6,2,3 };
-  // heights = { 1,1,1,8,4,4,1,1,1,1,1 };
-  Solution s;
-  cout << s.largestRectangleArea(heights) << endl;
-  return 0;
-}
+//int main() {
+//  vector<int> heights = { 2,1,5,6,2,3 };
+//  // heights = { 1,1,1,8,4,4,1,1,1,1,1 };
+//  Solution s;
+//  cout << s.largestRectangleArea(heights) << endl;
+//  return 0;
+//}
