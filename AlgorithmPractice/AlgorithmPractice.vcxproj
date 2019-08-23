@@ -157,6 +157,7 @@
     <ClCompile Include="leetcode84_largest_rectangle_in_histogram.cpp" />
     <ClCompile Include="leetcode86_partition_list.cpp" />
     <ClCompile Include="leetcode89_gray_code.cpp" />
+    <ClCompile Include="leetcode90_subsets_ii.cpp" />
     <ClCompile Include="POJ2394_checking_an_alibi.cpp" />
     <ClCompile Include="POJ3278_catch_that_cow.cpp" />
   </ItemGroup>

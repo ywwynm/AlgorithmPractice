@@ -28,12 +28,12 @@ public:
   }
 };
 
-int main() {
-  Solution s;
-  vector<int> res = s.grayCode(2);
-  for (auto i : res) {
-    cout << i << " ";
-  }
-  cout << endl;
-  return 0;
-}
+//int main() {
+//  Solution s;
+//  vector<int> res = s.grayCode(2);
+//  for (auto i : res) {
+//    cout << i << " ";
+//  }
+//  cout << endl;
+//  return 0;
+//}
