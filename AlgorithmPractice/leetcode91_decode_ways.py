@@ -1,6 +1,10 @@
 # 20200616, leetcode-cn
 
 class Solution:
+
+  def __init__(self):
+    self.results = dict()
+
   def numDecodings(self, s: str) -> int:
     # 26 -> B,F or Z, [2,6], [26]
     # 216 -> [2,1,6], [21,6], [2,16]
@@ -27,11 +31,23 @@ class Solution:
       if s_int_2 % 10 == 0:
         if s_int_2 >= 30:
           return 0
-        return self.numDecodings(s[2:])
+        key = s[2:]
+        if key not in self.results:
+          self.results[key] = self.numDecodings(key)
+        return self.results[key]
       elif s_int_2 > 26:
-        return self.numDecodings(s[1:])
+        key = s[1:]
+        if key not in self.results:
+          self.results[key] = self.numDecodings(key)
+        return self.results[key]
       else:
-        return self.numDecodings(s[1:]) + self.numDecodings(s[2:])
+        key1 = s[1:]
+        if key1 not in self.results:
+          self.results[key1] = self.numDecodings(key1)
+        key2 = s[2:]
+        if key2 not in self.results:
+          self.results[key2] = self.numDecodings(key2)
+        return self.results[key1] + self.results[key2]
 
 
 if __name__ == "__main__":
