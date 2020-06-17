@@ -50,8 +50,38 @@ class Solution:
         return self.results[key1] + self.results[key2]
 
 
+class SolutionBetter:
+  def numDecodings(self, s: str) -> int:
+    if s[0] == '0':
+      return 0
+
+    L = len(s)
+
+    dp = [None] * L
+    dp[0] = 1
+    
+    # 1223
+    for i in range(1, L):
+      c = int(s[i])
+      if c == 0 and int(s[i-1]) not in [1,2]:
+        return 0
+      
+      if c == 0:
+        dp[i] = dp[i-2]
+        if i == 1:
+          dp[i] = 1
+      else:
+        dp[i] = dp[i-1]
+        if i == 1 and int(s[:2]) <= 26:
+          dp[i] = 2
+        elif s[i-1] != '0' and int(s[i-1:i+1]) <= 26:
+          dp[i] += dp[i-2]
+
+    return dp[-1]
+
+
 if __name__ == "__main__":
-  s = Solution()
+  s = SolutionBetter()
   print(s.numDecodings('30'))
   print(s.numDecodings('301'))
   print(s.numDecodings('10'))
