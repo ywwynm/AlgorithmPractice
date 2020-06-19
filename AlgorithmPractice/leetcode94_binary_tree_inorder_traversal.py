@@ -11,8 +11,8 @@ class Solution:
 
     def traversal(node: TreeNode):
       if node is not None:
-        ret.append(node.val)
         traversal(node.left)
+        ret.append(node.val)
         traversal(node.right)
     
     traversal(root)
